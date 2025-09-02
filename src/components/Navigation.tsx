@@ -6,11 +6,10 @@ const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Contact", href: "#contact" }
+    { name: "Process", href: "#process" },
+    { name: "Projects", href: "#projects" }
   ];
 
   return (
@@ -19,8 +18,8 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-heading font-bold gradient-text">
-              ModernSite
+            <h1 className="text-2xl font-heading font-bold text-foreground">
+              TASKLETIX
             </h1>
           </div>
 

@@ -12,48 +12,36 @@ import {
 } from "lucide-react";
 
 const Features = () => {
-  const features = [
+  const services = [
     {
-      icon: <Rocket className="h-8 w-8" />,
-      title: "Lightning Fast",
-      description: "Optimized performance with cutting-edge technology for blazing fast load times.",
-      badge: "Performance",
-      color: "text-accent-blue"
+      icon: (
+        <div className="w-16 h-16 rounded-xl bg-primary flex items-center justify-center">
+          <Code2 className="h-8 w-8 text-white" />
+        </div>
+      ),
+      title: "Website Development",
+      description: "Custom websites built with modern technologies, optimized for performance and user experience.",
+      features: [
+        "Responsive Design",
+        "SEO Optimization", 
+        "Fast Loading",
+        "Mobile-First"
+      ]
     },
     {
-      icon: <Shield className="h-8 w-8" />,
-      title: "Secure & Reliable",
-      description: "Enterprise-grade security with 99.9% uptime guarantee and data protection.",
-      badge: "Security", 
-      color: "text-accent-green"
-    },
-    {
-      icon: <Smartphone className="h-8 w-8" />,
-      title: "Mobile First",
-      description: "Responsive design that looks perfect on every device and screen size.",
-      badge: "Design",
-      color: "text-accent-purple"
-    },
-    {
-      icon: <Code2 className="h-8 w-8" />,
-      title: "Clean Code",
-      description: "Well-structured, maintainable code following industry best practices.",
-      badge: "Development",
-      color: "text-accent-orange"
-    },
-    {
-      icon: <Globe className="h-8 w-8" />,
-      title: "Global Scale", 
-      description: "CDN-powered delivery ensuring fast access from anywhere in the world.",
-      badge: "Infrastructure",
-      color: "text-accent-blue"
-    },
-    {
-      icon: <TrendingUp className="h-8 w-8" />,
-      title: "Growth Focused",
-      description: "Built to scale with your business needs and handle increasing traffic.",
-      badge: "Scalability",
-      color: "text-primary"
+      icon: (
+        <div className="w-16 h-16 rounded-xl bg-primary flex items-center justify-center">
+          <Smartphone className="h-8 w-8 text-white" />
+        </div>
+      ),
+      title: "E-commerce Solutions",
+      description: "Complete online store solutions that drive sales and provide seamless shopping experiences.",
+      features: [
+        "Payment Integration",
+        "Inventory Management",
+        "Order Processing", 
+        "Analytics Dashboard"
+      ]
     }
   ];
 
@@ -62,43 +50,41 @@ const Features = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4">
-            Our Services
-          </Badge>
           <h2 className="font-heading font-bold text-4xl sm:text-5xl mb-6">
-            Why Choose
-            <span className="gradient-text"> Our Solutions</span>
+            Our Services
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            We deliver exceptional digital experiences with modern technology, 
-            creative design, and reliable performance.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            We offer comprehensive web development solutions tailored to your business needs
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {services.map((service, index) => (
             <Card 
               key={index} 
-              className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-2 border-border/50 hover:border-primary/20 bg-gradient-card"
+              className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-2 p-8"
             >
-              <CardHeader className="pb-4">
-                <div className="flex items-start justify-between mb-4">
-                  <div className={`p-3 rounded-lg bg-primary/10 ${feature.color} group-hover:scale-110 transition-transform duration-300`}>
-                    {feature.icon}
-                  </div>
-                  <Badge variant="secondary" className="text-xs">
-                    {feature.badge}
-                  </Badge>
+              <CardHeader className="pb-6">
+                <div className="mb-6">
+                  {service.icon}
                 </div>
-                <CardTitle className="text-xl font-semibold group-hover:text-primary transition-colors">
-                  {feature.title}
+                <CardTitle className="text-2xl font-semibold mb-4">
+                  {service.title}
                 </CardTitle>
+                <p className="text-muted-foreground leading-relaxed">
+                  {service.description}
+                </p>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
-                  {feature.description}
-                </p>
+                <div className="space-y-3">
+                  {service.features.map((feature, featureIndex) => (
+                    <div key={featureIndex} className="flex items-center gap-3">
+                      <div className="w-2 h-2 bg-accent-green rounded-full"></div>
+                      <span className="text-muted-foreground">{feature}</span>
+                    </div>
+                  ))}
+                </div>
               </CardContent>
             </Card>
           ))}

@@ -7,13 +7,7 @@ const Hero = () => {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroBackground} 
-          alt="Modern digital background" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-background/90"></div>
-        <div className="absolute inset-0 gradient-hero opacity-20"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800"></div>
       </div>
 
       {/* Floating Elements */}
@@ -25,25 +19,22 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-fade-in">
           {/* Badge */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
-            <Star className="w-4 h-4 text-primary mr-2" />
-            <span className="text-sm font-medium text-primary">
-              #1 Modern Web Solutions
-            </span>
+          <div className="text-sm text-muted-foreground mb-8 tracking-wider uppercase">
+            Building Digital Excellence Since 2024
           </div>
 
           {/* Main Heading */}
-          <h1 className="font-heading font-bold text-5xl sm:text-6xl lg:text-7xl mb-6 leading-tight">
-            Build Amazing
-            <span className="gradient-text block">
-              Digital Experiences
+          <h1 className="font-heading font-bold text-5xl sm:text-6xl lg:text-7xl mb-6 leading-tight text-white">
+            We Build Powerful
+            <span className="block">
+              Websites for Businesses
             </span>
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl sm:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
-            Create stunning websites and applications with our cutting-edge technology. 
-            Fast, reliable, and beautiful solutions for your business.
+          <p className="text-xl sm:text-2xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed">
+            Empowering brands through custom website solutions that drive growth,
+            enhance user experience, and deliver measurable results for your business.
           </p>
 
           {/* CTA Buttons */}
@@ -53,33 +44,35 @@ const Hero = () => {
               size="lg" 
               className="group shadow-primary hover-glow px-8 py-4 text-lg"
             >
-              Start Your Project
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              Let's Build Together →
             </Button>
             
             <Button 
               variant="outline" 
               size="lg" 
-              className="group px-8 py-4 text-lg border-primary/30 hover:border-primary"
+              className="group px-8 py-4 text-lg border-white/30 hover:border-white text-white hover:bg-white hover:text-primary"
             >
-              <Play className="mr-2 h-5 w-5" />
-              Watch Demo
+              View Our Work
             </Button>
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">500+</div>
-              <div className="text-sm text-muted-foreground">Projects Completed</div>
+              <div className="text-4xl font-bold text-primary mb-2">50+</div>
+              <div className="text-sm text-gray-400 uppercase tracking-wide">Projects Delivered</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">98%</div>
-              <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+              <div className="text-4xl font-bold text-primary mb-2">98%</div>
+              <div className="text-sm text-gray-400 uppercase tracking-wide">Client Satisfaction</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-              <div className="text-sm text-muted-foreground">Support Available</div>
+              <div className="text-4xl font-bold text-primary mb-2">24/7</div>
+              <div className="text-sm text-gray-400 uppercase tracking-wide">Support Available</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl font-bold text-primary mb-2">2+</div>
+              <div className="text-sm text-gray-400 uppercase tracking-wide">Years Experience</div>
             </div>
           </div>
         </div>

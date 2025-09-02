@@ -13,22 +13,20 @@ import {
 
 const Footer = () => {
   const footerLinks = {
+    Services: [
+      { name: "Website Development", href: "#" },
+      { name: "E-commerce Solutions", href: "#" },
+      { name: "Mobile Optimization", href: "#" },
+      { name: "Maintenance & Support", href: "#" }
+    ],
     Company: [
       { name: "About Us", href: "#" },
-      { name: "Our Team", href: "#" },
-      { name: "Careers", href: "#" },
-      { name: "Contact", href: "#" }
+      { name: "Our Process", href: "#" }
     ],
-    Services: [
-      { name: "Web Development", href: "#" },
-      { name: "Mobile Apps", href: "#" },
-      { name: "UI/UX Design", href: "#" },
-      { name: "Consulting", href: "#" }
-    ],
-    Resources: [
-      { name: "Blog", href: "#" },
+    Support: [
+      { name: "Contact Us", href: "#" },
+      { name: "FAQ", href: "#" },
       { name: "Documentation", href: "#" },
-      { name: "Help Center", href: "#" },
       { name: "Privacy Policy", href: "#" }
     ]
   };
@@ -72,26 +70,26 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-2xl font-heading font-bold gradient-text">
-              ModernSite
+            <h3 className="text-2xl font-heading font-bold text-foreground">
+              TASKLETIX
             </h3>
             <p className="text-muted-foreground">
-              Creating exceptional digital experiences with cutting-edge technology and innovative design solutions.
+              We're a passionate team of developers and designers creating exceptional web experiences 
+              that help businesses thrive in the digital world.
+            </p>
+            <p className="text-muted-foreground mt-4">
+              Building Digital Excellence Since 2024
             </p>
             
             {/* Contact Info */}
             <div className="space-y-2">
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 text-primary" />
-                <span>hello@modernsite.com</span>
+                <span>taskletix@gmail.com</span>
               </div>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <Phone className="h-4 w-4 text-primary" />
-                <span>+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                <MapPin className="h-4 w-4 text-primary" />
-                <span>123 Tech Street, Digital City</span>
+                <span>+91 95730 586468</span>
               </div>
             </div>
 
@@ -136,7 +134,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © 2024 ModernSite. All rights reserved.
+              © 2024 TASKLETIX. All Rights Reserved.
             </p>
             <div className="flex gap-6">
               <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
