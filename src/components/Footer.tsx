@@ -1,0 +1,159 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Facebook, 
+  Twitter, 
+  Instagram, 
+  Linkedin,
+  ArrowRight
+} from "lucide-react";
+
+const Footer = () => {
+  const footerLinks = {
+    Company: [
+      { name: "About Us", href: "#" },
+      { name: "Our Team", href: "#" },
+      { name: "Careers", href: "#" },
+      { name: "Contact", href: "#" }
+    ],
+    Services: [
+      { name: "Web Development", href: "#" },
+      { name: "Mobile Apps", href: "#" },
+      { name: "UI/UX Design", href: "#" },
+      { name: "Consulting", href: "#" }
+    ],
+    Resources: [
+      { name: "Blog", href: "#" },
+      { name: "Documentation", href: "#" },
+      { name: "Help Center", href: "#" },
+      { name: "Privacy Policy", href: "#" }
+    ]
+  };
+
+  const socialLinks = [
+    { icon: <Facebook className="h-5 w-5" />, href: "#", name: "Facebook" },
+    { icon: <Twitter className="h-5 w-5" />, href: "#", name: "Twitter" },
+    { icon: <Instagram className="h-5 w-5" />, href: "#", name: "Instagram" },
+    { icon: <Linkedin className="h-5 w-5" />, href: "#", name: "LinkedIn" }
+  ];
+
+  return (
+    <footer className="bg-background border-t border-border">
+      {/* Newsletter Section */}
+      <div className="border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center max-w-2xl mx-auto">
+            <h3 className="text-2xl font-heading font-bold mb-4">
+              Stay Updated with Our Latest News
+            </h3>
+            <p className="text-muted-foreground mb-6">
+              Subscribe to our newsletter and get the latest updates on our services and industry insights.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <Input 
+                type="email" 
+                placeholder="Enter your email"
+                className="flex-1"
+              />
+              <Button variant="hero" className="group">
+                Subscribe
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="space-y-4">
+            <h3 className="text-2xl font-heading font-bold gradient-text">
+              ModernSite
+            </h3>
+            <p className="text-muted-foreground">
+              Creating exceptional digital experiences with cutting-edge technology and innovative design solutions.
+            </p>
+            
+            {/* Contact Info */}
+            <div className="space-y-2">
+              <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                <Mail className="h-4 w-4 text-primary" />
+                <span>hello@modernsite.com</span>
+              </div>
+              <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                <Phone className="h-4 w-4 text-primary" />
+                <span>+1 (555) 123-4567</span>
+              </div>
+              <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                <MapPin className="h-4 w-4 text-primary" />
+                <span>123 Tech Street, Digital City</span>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex gap-3 pt-4">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  className="p-2 rounded-lg bg-muted hover:bg-primary hover:text-white transition-colors"
+                  aria-label={social.name}
+                >
+                  {social.icon}
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Footer Links */}
+          {Object.entries(footerLinks).map(([category, links]) => (
+            <div key={category}>
+              <h4 className="font-semibold text-foreground mb-4">{category}</h4>
+              <ul className="space-y-3">
+                {links.map((link, index) => (
+                  <li key={index}>
+                    <a
+                      href={link.href}
+                      className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="border-t border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-muted-foreground">
+              © 2024 ModernSite. All rights reserved.
+            </p>
+            <div className="flex gap-6">
+              <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                Terms of Service
+              </a>
+              <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                Cookie Policy
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
