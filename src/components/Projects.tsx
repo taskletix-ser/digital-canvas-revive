@@ -1,5 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import ecommerceProject from "@/assets/ecommerce-project.jpg";
+import corporateProject from "@/assets/corporate-project.jpg";
+import webappProject from "@/assets/webapp-project.jpg";
 
 const Projects = () => {
   const projects = [
@@ -7,19 +10,19 @@ const Projects = () => {
       title: "E-commerce Platform",
       description: "A modern e-commerce website with advanced features and seamless user experience.",
       technologies: ["React", "Node.js", "MongoDB"],
-      image: "bg-gradient-to-br from-blue-600 to-purple-600"
+      image: ecommerceProject
     },
     {
       title: "Corporate Website", 
       description: "A professional corporate website that effectively communicates the brand message.",
       technologies: ["HTML5", "CSS3", "JavaScript"],
-      image: "bg-gradient-to-br from-teal-500 to-blue-600"
+      image: corporateProject
     },
     {
       title: "Web Application",
       description: "A complex web application with real-time features and advanced functionality.",
       technologies: ["Vue.js", "Express", "PostgreSQL"],
-      image: "bg-gradient-to-br from-green-500 to-teal-600"
+      image: webappProject
     }
   ];
 
@@ -41,7 +44,12 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Card key={index} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-2 overflow-hidden">
               {/* Project Image */}
-              <div className={`h-48 ${project.image} relative`}>
+              <div className="h-48 relative overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
               </div>
               

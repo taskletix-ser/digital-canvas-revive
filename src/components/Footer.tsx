@@ -3,40 +3,29 @@ import { Input } from "@/components/ui/input";
 import { 
   Mail, 
   Phone, 
-  MapPin, 
-  Facebook, 
-  Twitter, 
-  Instagram, 
-  Linkedin,
+  MapPin,
   ArrowRight
 } from "lucide-react";
 
 const Footer = () => {
   const footerLinks = {
     Services: [
-      { name: "Website Development", href: "#" },
-      { name: "E-commerce Solutions", href: "#" },
-      { name: "Mobile Optimization", href: "#" },
-      { name: "Maintenance & Support", href: "#" }
+      { name: "Website Development", href: "#services" },
+      { name: "E-commerce Solutions", href: "#services" },
+      { name: "Mobile Optimization", href: "#services" },
+      { name: "Maintenance & Support", href: "#services" }
     ],
     Company: [
-      { name: "About Us", href: "#" },
-      { name: "Our Process", href: "#" }
+      { name: "About Us", href: "#about" },
+      { name: "Our Process", href: "#process" }
     ],
     Support: [
-      { name: "Contact Us", href: "#" },
-      { name: "FAQ", href: "#" },
-      { name: "Documentation", href: "#" },
-      { name: "Privacy Policy", href: "#" }
+      { name: "Contact Us", href: "#contact" },
+      { name: "FAQ", href: "#contact" },
+      { name: "Documentation", href: "#contact" },
+      { name: "Privacy Policy", href: "#contact" }
     ]
   };
-
-  const socialLinks = [
-    { icon: <Facebook className="h-5 w-5" />, href: "#", name: "Facebook" },
-    { icon: <Twitter className="h-5 w-5" />, href: "#", name: "Twitter" },
-    { icon: <Instagram className="h-5 w-5" />, href: "#", name: "Instagram" },
-    { icon: <Linkedin className="h-5 w-5" />, href: "#", name: "LinkedIn" }
-  ];
 
   return (
     <footer className="bg-background border-t border-border">
@@ -92,20 +81,6 @@ const Footer = () => {
                 <span>+91 95730 586468</span>
               </div>
             </div>
-
-            {/* Social Links */}
-            <div className="flex gap-3 pt-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="p-2 rounded-lg bg-muted hover:bg-primary hover:text-white transition-colors"
-                  aria-label={social.name}
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Footer Links */}
@@ -137,13 +112,13 @@ const Footer = () => {
               © 2024 TASKLETIX. All Rights Reserved.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a href="#contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a href="#contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                 Terms of Service
               </a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              <a href="#contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                 Cookie Policy
               </a>
             </div>

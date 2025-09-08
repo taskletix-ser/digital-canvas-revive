@@ -8,7 +8,8 @@ import {
   Globe, 
   Smartphone,
   Code2,
-  TrendingUp
+  TrendingUp,
+  Wrench
 } from "lucide-react";
 
 const Features = () => {
@@ -42,6 +43,36 @@ const Features = () => {
         "Order Processing", 
         "Analytics Dashboard"
       ]
+    },
+    {
+      icon: (
+        <div className="w-16 h-16 rounded-xl bg-primary flex items-center justify-center">
+          <Globe className="h-8 w-8 text-white" />
+        </div>
+      ),
+      title: "Mobile Optimization",
+      description: "Ensure your website works perfectly on all devices with our mobile-first approach.",
+      features: [
+        "Touch-Friendly Design",
+        "Fast Mobile Loading",
+        "App-Like Experience", 
+        "Cross-Platform"
+      ]
+    },
+    {
+      icon: (
+        <div className="w-16 h-16 rounded-xl bg-primary flex items-center justify-center">
+          <Wrench className="h-8 w-8 text-white" />
+        </div>
+      ),
+      title: "Maintenance & Support",
+      description: "Ongoing support and maintenance to keep your website running smoothly and securely.",
+      features: [
+        "Regular Updates",
+        "Security Monitoring",
+        "Performance Optimization", 
+        "24/7 Support"
+      ]
     }
   ];
 
@@ -59,7 +90,7 @@ const Features = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {services.map((service, index) => (
             <Card 
               key={index} 
