@@ -50,7 +50,7 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="group px-8 py-4 text-lg border-white/30 hover:border-white text-white hover:bg-white hover:text-primary"
+              className="group px-8 py-4 text-lg border-white/30 hover:border-white  hover:text-primary"
             >
               View Our Work
             </Button>

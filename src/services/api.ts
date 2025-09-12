@@ -110,10 +110,10 @@ export const contactApi = {
 // Admin API functions
 export const adminApi = {
   // Admin login
-  async login(password: string): Promise<ApiResponse & { token?: string }> {
+  async login(password: string, username?: string): Promise<ApiResponse & { token?: string }> {
     return apiRequest<ApiResponse & { token?: string }>('/admin/login', {
       method: 'POST',
-      body: JSON.stringify({ password }),
+      body: JSON.stringify({ username: username || 'admin', password }),
     });
   },
 
