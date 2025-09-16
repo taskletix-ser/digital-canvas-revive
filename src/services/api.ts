@@ -1,5 +1,5 @@
 // API service for backend communication
-const API_BASE_URL = '/api';
+const API_BASE_URL = 'http://82.29.165.109:5000/api';
 
 export interface ContactFormData {
   name: string;
